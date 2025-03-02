@@ -27,7 +27,7 @@ a {
 }
 
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 .fade {
@@ -48,6 +48,7 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
+  padding: 0rem 8rem;
 }
 
 .row {
@@ -88,6 +89,9 @@ p {
 .search {
   display: block;
   margin: 0 auto 2rem;
+  &__wrapper {
+    padding: 0 1rem;
+  }
 }
 
 input[type='search'] {
@@ -129,10 +133,10 @@ img {
   margin: 10vh 0;
 
   &__wrapper {
-    height: 30rem;
     overflow: auto;
     padding: 0.5rem 1rem;
     text-align: center;
+    height: calc(90vh - 50px);
   }
 
   &__list {
@@ -145,7 +149,7 @@ img {
     border-radius: 0.25rem;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1),
       0 4px 5px 0 rgba(0, 0, 0, 0.07), 0 1px 10px 0 rgba(0, 0, 0, 0.06);
-    display: grid;
+    display: block;
     grid-gap: 0.5rem;
     padding: 1rem;
     position: relative;
@@ -183,6 +187,7 @@ img {
   }
 
   &__details {
+    margin: 1rem 0rem;
     display: grid;
     grid-gap: 1rem;
   }
@@ -215,4 +220,16 @@ img {
 
 .max-reached {
   padding: 1rem 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }

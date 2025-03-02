@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
-
-function App() {
-  return <div className="App">Start coding!!!</div>;
-}
+import List from './components/List';
+const App = () => {
+  return (
+    <>
+      <List />
+    </>
+  );
+};
 
 export default App;
