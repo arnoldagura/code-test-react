@@ -56,13 +56,13 @@ const LaunchDetails = ({ launch }) => {
       </div>
       <div className='flex gap-4'>
         {launch.links.mission_patch_small ? (
-          <picture>
-            <source srcSet={launch.links.mission_patch_small} />
-            <img
-              src={`https://placehold.co/150x170?text=${launch.mission_name}`}
-              alt={launch.mission_name}
-            />
-          </picture>
+          <img
+            src={launch.links.mission_patch_small}
+            alt={launch.mission_name}
+            onError={(e) => {
+              e.target.src = `https://placehold.co/150x170?text=${launch.mission_name}`;
+            }}
+          />
         ) : (
           <img
             src={`https://placehold.co/150x170?text=No image yet`}
