@@ -127,6 +127,7 @@ h2 {
 
 img {
   width: auto;
+  max-width: 150px;
 }
 
 .launch {
@@ -232,4 +233,12 @@ img {
 }
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+.text {
+  padding: 0.25rem;
+  margin: 0;
 }

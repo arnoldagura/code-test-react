@@ -54,15 +54,22 @@ const LaunchDetails = ({ launch }) => {
           </>
         )}
       </div>
-      <div className='flex gap-1'>
-        <img
-          src={launch.links.mission_patch_small}
-          alt='Mission Patch'
-          onError={(e) => {
-            e.target.src = '/placeholder.jpg'; // Fallback image
-          }}
-        />
-        <p className={`${launch.details || 'no-content'}`}>
+      <div className='flex gap-4'>
+        {launch.links.mission_patch_small ? (
+          <picture>
+            <source srcSet={launch.links.mission_patch_small} />
+            <img
+              src={`https://placehold.co/150x170?text=${launch.mission_name}`}
+              alt={launch.mission_name}
+            />
+          </picture>
+        ) : (
+          <img
+            src={`https://placehold.co/150x170?text=No image yet`}
+            alt={launch.mission_name}
+          />
+        )}
+        <p className={`text ${launch.details || 'no-content'}`}>
           {launch.details || 'No details available.'}
         </p>
       </div>
